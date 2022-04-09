@@ -14,7 +14,7 @@
 /* Wrappers */
 
 	#header-wrapper {
-		background: url("../../images/header_background.jpg");
+		background: url("../../images/header.jpg");
 		background-position: center center;
 		background-size: cover;
 		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");

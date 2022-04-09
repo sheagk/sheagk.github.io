@@ -90,7 +90,7 @@
 		.container.\31 25\25 {
 			width: 100%;
 			max-width: 1500px;
-			/* min-width: 1200px; */
+			min-width: 1200px;
 		}
 
 		.container.\37 5\25 {
@@ -116,7 +116,7 @@
 		.container.\31 25\25 {
 			width: 100%;
 			max-width: 1250px;
-			/* min-width: 1000px; */
+			min-width: 1000px;
 		}
 
 		.container.\37 5\25 {
@@ -133,7 +133,6 @@
 
 		.container {
 			width: 1000px;
-			width: 100%;
 		}
 
 	}
@@ -323,9 +322,9 @@
 	}
 
 	.\38 u, .\38 u\24 {
-		width: 60%;
+		width: 66.6666666667%;
 		clear: none;
-		margin-right: 10px;
+		margin-left: 0;
 	}
 
 	.\37 u, .\37 u\24 {
@@ -341,16 +340,15 @@
 	}
 
 	.\35 u, .\35 u\24 {
-		width: 40%;
+		width: 41.6666666667%;
 		clear: none;
 		margin-left: 0;
-		margin-right: 10px;
 	}
 
 	.\34 u, .\34 u\24 {
-		width: 30%;
+		width: 33.3333333333%;
 		clear: none;
-		margin-left: 10px;
+		margin-left: 0;
 	}
 
 	.\33 u, .\33 u\24 {
@@ -648,7 +646,6 @@
 	@media screen and (min-width: 737px) and (max-width: 1200px) {
 
 		.row > * {
-			/* padding: 35px 0 0 35px; */
 			padding: 35px 0 0 35px;
 		}
 
@@ -785,7 +782,7 @@
 		.\33 u\28tablet\29, .\33 u\24\28tablet\29 {
 			width: 25%;
 			clear: none;
-			margin-left: 10px;
+			margin-left: 0;
 		}
 
 		.\32 u\28tablet\29, .\32 u\24\28tablet\29 {
@@ -1275,7 +1272,7 @@
 		color: rgb(100,100,100);}
 
 	h3 a:hover {
-		color: rgb(175,175,175);
+		color: rgb(25,25,25);
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1916,7 +1913,7 @@
 /* Wrappers */
 
 	#header-wrapper {
-		background: url("images/bg01.png"), url("../../images/header_background.jpg");
+		background: url("images/bg01.png"), url("../../images/header.jpg");
 		background-position: top left, center center;
 		background-size: auto, cover;
 	}
@@ -2124,12 +2121,12 @@
 	#pubs ul.hangingindent {
 		  padding-left: 22px ;
 		  text-indent: -22px ;
-		}
+		}	
 
 	#pubs ul {
 		text-align: left;
-	    list-style: outside none;
-	    margin-left: 0;
+	    list-style: outside none; 
+	    margin-left: 0; 
 	    padding-left: 1em;
 	}
 	#pubs ul > li {
@@ -2182,8 +2179,8 @@
 				position: relative;
 				width: 100%;
 				border-radius: 0px;
-				background: rgba(130, 130, 130, 0);
-				/*padding: 0.75em;*/
+				background: rgba(130, 130, 130, 0); 
+*/				/*padding: 0.75em;*/
 			}
 
 				#header .inner {
@@ -2216,7 +2213,7 @@
 					background-color: rgba(50,50,50,1);
 
 					/* this makes the background fade in with time, but I want it to fade in with scroll... */
-/*				    -webkit-transition: background 300ms ease-in 200ms;
+/*				    -webkit-transition: background 300ms ease-in 200ms;		
 				    -moz-transition: background 300ms ease-in 200ms;
 				    -o-transition: background 300ms ease-in 200ms;
 				    transition: background 300ms ease-in 200ms;*/
@@ -2241,7 +2238,7 @@
 			}*/
 				#nav
 				{
-					background-color: rgba(50,50,50,0);
+					background-color: rgba(50,50,50,0); 
 					/*background-image: url('../../images/navback.jpg');*/
 					/*background-position: center;*/
 					/*background-size: 100%;*/
@@ -2263,12 +2260,12 @@
 				{
 					margin: 0 auto;
 				}
-
+			
 				#nav li
 				{
 					display: inline-block;
 				}
-
+				
 				#nav a
 				{
 					position: relative;
@@ -2287,7 +2284,7 @@
 					background: rgba(100, 100, 100, 1);
 				}
 
-				#nav ul > li.active
+				#nav ul > li.active 
 				{
 					background: rgba(100, 100, 100, 1);
 				}
@@ -2389,7 +2386,7 @@
 		/* Basic */
 
 			body {
-				/* min-width: 1000px; */
+				min-width: 1000px;
 				line-height: 1.75em;
 				font-size: 10.75pt;
 			}
@@ -2422,8 +2419,7 @@
 		/* Banner */
 
 			#banner {
-				/* width: 940px; */
-				width: 100%;
+				width: 940px;
 				padding: 2em 0 0 0;
 			}
 
@@ -2811,12 +2807,12 @@
 				{
 					margin: 0 auto;
 				}
-
+			
 				#nav li
 				{
 					display: inline-block;
 				}
-
+				
 				#nav a
 				{
 					position: relative;

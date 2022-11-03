@@ -9,15 +9,14 @@
 $(function() {
     // this will get the full URL at the address bar
     var url = window.location.href;
-
     // passes on every "a" tag
     $(".topmenu a").each(function() {
         // checks if its the same on the address bar
-        if (url == (this.href)) {
+			if (url == (this.href)) {
             $(this).closest("li").addClass("active");
         }
     });
-});   
+});
 
 
  // var topRange      = 200,  // measure from the top of the viewport to X pixels down
@@ -31,7 +30,7 @@ $("video").click(function(e){
   // handle click if not Firefox (Firefox supports this feature natively)
   if (typeof InstallTrigger === 'undefined') {
 
-      // get click position 
+      // get click position
       var clickY = (e.pageY - $(this).offset().top);
       var height = parseFloat( $(this).height() );
 
@@ -55,7 +54,7 @@ $(document).ready(function() {
 
 	    $('html, body').stop().animate({
 	        'scrollTop': $target.offset().top
-	    }, 900, 'swing' 
+	    }, 900, 'swing'
 	    //, function () {
 	    //     window.location.hash = target;
 	    // }
@@ -101,8 +100,8 @@ $(document).ready(function() {
 	// smoothly adjust the opacity of the navbar as you scroll
   $(window).on('scroll',function () {
       //if you hard code, then use console
-      //.log to determine when you want the 
-      //nav bar to stick.  
+      //.log to determine when you want the
+      //nav bar to stick.
       var path = window.location.pathname.split('/');
       var path = path[path.length -1];
       if (path != 'genealogy.html') {
@@ -148,12 +147,12 @@ $(document).ready(function() {
 
     /**
      * This part handles the highlighting functionality.
-     * We use the scroll functionality again, some array creation and 
+     * We use the scroll functionality again, some array creation and
      * manipulation, class adding and class removing, and conditional testing
      */
     var aChildren = $("nav li").children(); // find the a children of the list items
     var aArray = []; // create the empty aArray
-    for (var i=0; i < aChildren.length; i++) {    
+    for (var i=0; i < aChildren.length; i++) {
         var aChild = aChildren[i];
         var ahref = $(aChild).attr('href');
         aArray.push(ahref);
@@ -161,27 +160,32 @@ $(document).ready(function() {
 
     $(window).scroll(function(){
         var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
-        var windowHeight = $(window).height(); // get the height of the window
-        var docHeight = $(document).height();
+				if (windowPos > 50) {
+					var windowHeight = $(window).height(); // get the height of the window
+					var docHeight = $(document).height();
 
-        for (var i=0; i < aArray.length; i++) {
-            var theID = aArray[i];
-            var divPos = $(theID).offset().top; // get the offset of the div from the top of page
-            var divHeight = $(theID).height(); // get the height of the div in question
-            if (windowPos >= divPos - 50 && windowPos < (divPos + divHeight)) {
-                $("a[href='" + theID + "']").addClass("nav-active");
-            } else {
-                $("a[href='" + theID + "']").removeClass("nav-active");
-            }
-        }
+					for (var i = 0; i < aArray.length; i++) {
+						var theID = aArray[i];
+						var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+						var divHeight = $(theID).height(); // get the height of the div in question
+						if (windowPos >= divPos - 50 && windowPos < (divPos + divHeight)) {
+							$("a[href='" + theID + "']").addClass("nav-active");
+						} else {
+							$("a[href='" + theID + "']").removeClass("nav-active");
+						}
+					}
 
-        if(windowPos + windowHeight == docHeight) {
-            if (!$("nav li:last-child a").hasClass("nav-active")) {
-                var navActiveCurrent = $(".nav-active").attr("href");
-                $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
-                $("nav li:last-child a").addClass("nav-active");
-            }
-        }
+					if (windowPos + windowHeight == docHeight) {
+						if (!$("nav li:last-child a").hasClass("nav-active")) {
+							var navActiveCurrent = $(".nav-active").attr("href");
+							$("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
+							$("nav li:last-child a").addClass("nav-active");
+						}
+					}
+				}
+				else {
+					$("a[href='" + aArray[0] + "']").removeClass("nav-active");
+				}
     });
 
 
@@ -203,7 +207,7 @@ $(document).ready(function() {
 
 // 		jQuery('form .form-button-submit').click(function(e) { e.preventDefault(); jQuery(this).closest('form').submit(); });
 // 		jQuery('form .form-button-reset').click(function(e) { e.preventDefault(); jQuery(this).closest('form')[0].reset(); });
-	
+
 // 	// Links
 // 		jQuery('a').click(function(e) {
 // 			var t = jQuery(this), h = t.attr('href'), article;
@@ -220,7 +224,7 @@ $(document).ready(function() {
 
 
 // one attempt at doing the fading, though here it's doing as left scrolling
-// var fadeStart=3575 
+// var fadeStart=3575
 //     ,fadeUntil=4150
 //     ,fading = $('#fading')
 // ;
@@ -264,7 +268,6 @@ $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
         $( "#nav #background" ).fadeIn();
     } else {
-        console.log('there');
         $( "#nav #background" ).fadeOut();
     }
 });
